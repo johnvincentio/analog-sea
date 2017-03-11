@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Signup to become a member of AnalogSea, a leading Cloud Provider">
+    <meta name="keywords" content="AnalogSea, Member, Cloud Computing, SasS, PaaS, SEO">
+    <meta name="author" content="John Vincent">
+    <title>AnalogSea Signup</title>
+
+    <!-- HTML5 Semantics: http://www.w3schools.com/html/html5_semantic_elements.asp -->
+
+    <!-- Check HTML5 semantics: https://gsnedders.html5.org/outliner/ -->
+
+    <!-- Google Structured Data Testing Tool: https://search.google.com/structured-data/testing-tool/u/0/ -->
+
+    <!-- for ARIA in HTML: https://www.w3.org/TR/html-aria/ -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+
+    <!-- load Google fonts: https://fonts.google.com -->
+    <link href="https://fonts.google.com/?selection.family=Roboto:300,400,500" rel="stylesheet">
+
+    <!-- load my own stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header role="presentation">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="AnalogSea">
+        </a>
+    </header>
+
+    <main role="main">
+        <section id="sign-up">
+            <header role="banner">
+                <h1>Sign up</h1>
+            </header>
+            <form role="form" class="sign-up-form" action="/signup/" method="post">
+                <fieldset name="contact-info">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="foo@bar.com" required
+                    itemprop="email" itemscope itemtype="http://schema.org/Person"/>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="1234passw0rd" required itemprop="accessCode" itemscope itemtype="http://schema.org/Thing"/>
+                </fieldset>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <nav role="navigation">
+                <a href="/forgot-password/new">Forgot password?</a>
+            </nav>
+        </section>
+
+        <section id="login">
+            <nav role="navigation">
+                <p>Already have an account? <a href="/login">Log in</a></p>
+            </nav>
+        </section>
+    </main>
+
+</body>
+
+</html>

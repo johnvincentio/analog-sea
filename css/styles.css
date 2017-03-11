@@ -1,0 +1,280 @@
+
+/* ----------------------------------- */
+/* Basic setup */
+/* ----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #119DDE;
+/*
+    color: #555;
+
+    font-weight: 300;
+    font-size: 20px;
+*/
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------- */
+/* Header */
+/* ----------------------------------- */
+
+header {
+    padding: 35px 0;
+}
+header img {
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+}
+
+/* ----------------------------------- */
+/* Sign-up */
+/* ----------------------------------- */
+
+#sign-up {
+    background-color: white;
+    margin: 0 auto;
+    width: 400px;
+    padding: 0 40px;
+    border-radius: 3px;
+}
+
+#sign-up header {
+    padding: 28px 0;
+    text-align: center;
+    margin: 0px;
+}
+
+#sign-up header h1 {
+    font-weight: 400;
+}
+
+#sign-up .sign-up-form {
+    margin: 0;
+}
+
+input[type=email],
+input[type=password] {
+    width: 320px;
+    border: 2px solid gray;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: 300;
+}
+
+
+
+label {
+    display: block;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+button {
+    display: block;
+    background-color: #00b33c;
+    color: white;
+    width: 320px;
+    height: 55px;
+    border: 2px solid #4AB279;
+    border-radius: 4px;
+    padding: 15px 0;
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+button:hover {
+    background-color: #00802b;
+    cursor: pointer;
+}
+
+#sign-up nav {
+    text-align: center;
+    padding: 10px 0 40px;
+}
+
+#sign-up nav a {
+    padding: 10px 0;
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* ----------------------------------- */
+/* Login */
+/* ----------------------------------- */
+
+#login nav {
+    text-align: center;
+    padding: 15px 0;
+}
+
+#login nav p,
+#login nav p a {
+    color: white;
+}
+
+/*
+Inheritance is about how properties trickle down from an element to its children. Certain properties, like font-family inherit.
+
+The cascade is about what take precedence when there is a conflict. The rules of the cascade include:
+
+inline styles win over external and importance.
+
+Later properties override earlier properties
+More specific selectors override less specific selectors
+Specified properties override inherited properties
+And so on. The cascade solves any conflict situations. It is the order in which properties are applied.
+*/
+
+/*
+background-color: #ff0000;
+background-color: rgb(255, 0, 0);    red, green, blue
+background-color: rgba(255, 0, 0, 0.3);    red with opacity
+0.0 (fully transparent) and 1.0 (fully opaque)
+background-color: hsl(120, 100%, 50%);    green
+background-color: hsla(120, 100%, 50%, 0.3);    green with opacity
+
+background-image: url("gradient_bg.png")
+background-repeat: repeat-x;    also repeat-y
+background-repeat: no-repeat;
+background-position: right top;
+background-attachment: fixed;
+*/
+
+/*
+* {margin: 0; padding: 0};
+
+can use * anywhere
+
+.my-class {};
+#my-id {};
+div b { color: green; }  all descendants
+div > b { color: red; }  direct descendant/child
+
+Order of pseudo classes is important:
+a:link { color: red; }   not yet clicked on
+a:visited { color: purple; }  already clicked
+a:hover { color: green; }   mouse over link
+a:active { color: yellow; }  selected link
+
+ul + p {color: red;}  adjacent selector, only first p after </ul>
+
+ul ~ p {color: red;}  any p elements that follow ul, not before the ul
+
+a[title] {color: green;}  a tag with attr title, <a href="#" title="Some title">consectetur</a>
+
+a[href="http://www.jv2351.com"] {color: green;}  green if www.jv2351.com
+
+a[href*="jv2351"] {color: red;}  href containing jv2351
+
+a[href^="http"] {color: red;)  starts with http
+
+a[href$=".jpg"] {color: red;}  ends with .jpg
+
+a[data-filetype="image"] {color: red;}   custom attribute data-filetype = "image"
+
+a[data-info~="external"] {color: red;}
+a[data-info~="image"] {border: 1px solid black;}
+<a href="path/to/image.jpg" data-info="external image"> Click Me, Fool </a>
+will be red with the solid black border
+
+input[type=radio]:checked {border: 1px solid black;}  element that has been checked.
+
+input[type=radio]:checked + label {color: blue;}
+<input type="radio" name="rad" value="Radio Button">
+<label for="rad"> Radio Button</label>
+radio button and label are blue if radio is checked.
+
+p:before
+p:after
+
+div:hover {border-bottom: 1px solid black;}  text-decoration: none;
+
+div:not(#container) {color: blue;}  alls div except for div with id=container
+div:not(p) {color: blue;}    alls div except for p elements
+
+p::first-line {font-weight: bold; font-size: 1.2em;}
+
+p::first-letter {
+    text-transform: uppercase;
+    color: red;
+   float: left;
+   font-size: 2em;
+   font-weight: bold;
+   font-family: cursive;
+   padding-right: 2px;
+}
+
+li:nth-child(2) {color: red;}   second li child element, not zero based
+li:nth-last-child(2) {color: red;}  second to last li child element, not zero based
+
+ul:nth-of-type(3) {border: 1px solid black;}  3rd instance of type ul
+ul:nth-last-of-type(3) {border: 1px solid black;} 3rd to last instance of type ul
+
+ul li:first-child {border-top: none;}  first li child of element ul
+ul li:last-child {border-top: none;}  last li child of element ul
+no borders on top or bottom of a list.
+
+div p:only-child {color: red;}  if p is the only child of div
+
+div p:only-of-type {color: red;}  only single p child of div
+li:only-of-type {font-weight: bold;}  only single li child
+
+ul:first-of-type > li:nth-child(2) {font-weight: bold;}
+second li child of the first ul element
+
+tooltip:
+p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+div:hover p {
+    display: block;
+}
+
+box-sizing:
+content-box (default)
+border-box
+padding-box
+
+2 bordered boxes side by side:
+div {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+
+*/
+
